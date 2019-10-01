@@ -1,1 +1,149 @@
 /* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f8f8f8; }
+/*@import "~@angular/material/prebuilt-themes/indigo-px|ink.css";*/
+
+html, body { height: 100%; }
+
+.mat-row:nth-child(even) {
+  background-color: white;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: rgba(243, 28, 93, 0.05);
+}
+
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+/* Buttons */
+.mat-toolbar.mat-primary,
+mat-stroked-button {
+  background: #9d2449; /*#EAEAEA; */
+  color: #ba9664;
+}
+
+.mat-icon-button {
+  color: #9d2449;
+}
+
+.mat-flat-button,
+.mat-mini-fab,
+.mat-raised-button,
+.mat-stroked-button {
+  background-color: white;
+  border: 1px solid #9d2449 !important;
+  color: #9d2449;
+}
+
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-stroked-button.mat-primary {
+  background-color: #9d2449;
+  color: white;
+}
+
+.mat-fab.mat-accent,
+.mat-flat-button.mat-accent,
+.mat-mini-fab.mat-accent,
+.mat-raised-button.mat-accent,
+.mat-stroked-button.mat-accent {
+  background-color: #b78c62;
+  color: white;
+  border-color: #b78c62;
+}
+
+.mat-fab.mat-primary {
+  background-color: #b99263;
+}
+
+.text-danger {
+  color: red;
+  display: block;
+}
+
+.mat-chip.mat-standard-chip {
+  border-radius: 5px;
+}
+
+/* Calendar */
+.mat-calendar-body-selected {
+  background-color: #9d2449;
+  color: #fff;
+}
+
+/* Select */
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #9d2449;
+}
+
+/* Menú */
+
+/*.mat-drawer-container {
+  height: 100vh;
+}*/
+
+.mat-expansion-panel-header {
+  padding: 0 10px !important;
+}
+
+.mat-expansion-panel-body {
+  padding: 0 5px 0px !important;
+}
+
+/* input file */
+
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Select some files";
+  color: #9d2449;
+  display: inline-block;
+  background: white;
+  border: 1px solid #9d2449;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: #9d2449;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.container {
+  padding: 1px;
+  overflow: hidden;
+}
+.container span {
+  display: inline-block;
+  *float: left;
+}
+
+.title_acuerdo {
+  font-weight: 500;
+  font-stretch: normal;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 8px;
+}

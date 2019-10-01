@@ -1,0 +1,40 @@
+<app-toolbar></app-toolbar>
+<!--style="position: fixed; width: 100%; z-index: 1000;"-->
+<div fxLayout="row" fxLayoutAlign="center" id="div_form">
+    <div fxLayout="column" fxLayoutAlign="center center" style="height: 90vh">
+        <mat-card class="kt-login-card mat-elevation-z8">
+            <div class="spinner-container"
+                *ngIf="submitted">
+                <mat-progress-bar mode="query"></mat-progress-bar>
+            </div>
+            <br/>
+            <form [formGroup]="form" >
+                <mat-card-content>
+                    <p style="width: 300px; text-align: center;">
+                        <img src="../../../assets/FUNCION_VERTICAL_FB.jpg"
+                        width="40%"
+                        alt="logo_sfp"/>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline"  style="width: 100%">
+                            <mat-label>Usuario</mat-label>
+                            <input matInput formControlName="username" placeholder="Nombre de usuario" required>
+                            <mat-hint>Sólo caracteres alfanuméricos</mat-hint>
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline" style="width: 100%"> 
+                            <mat-label>Contraseña</mat-label>
+                            <input type="password" matInput formControlName="password" placeholder="Contraseña" required>
+                        </mat-form-field>
+                    </p>
+                    <mat-card-actions class="kt-card-actions" fxLayout="row" fxLayoutAlign="center center">
+                        <button mat-raised-button  [disabled]="submitted" (click)="validaUsuario(form.value)" color="primary">
+                            <mat-icon>account_circle</mat-icon> Ingresar
+                        </button>
+                    </mat-card-actions>
+                </mat-card-content>
+            </form>
+        </mat-card>
+    </div>
+</div>
