@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   appTitle = 'Sistema de  Asuntos Jurídicos';
   acronymusTitle = "SAJ";
-  idDestinatario = 6409;
+ 
 }

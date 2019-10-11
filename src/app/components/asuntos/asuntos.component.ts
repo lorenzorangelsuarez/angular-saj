@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Asunto } from '../../core/classes/asunto';
-import { AsuntosService } from '../../core/services/asuntos.service';
+import { Asunto } from '../../core/classes/Asunto';
+import { AsuntosService } from '../../services/asuntos.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 

@@ -1,8 +1,15 @@
-<div>
-    <h2>Asuntos</h2>
-    <div *ngFor="let asunto of asuntos">
-      <p>{{asunto.idAsunto}}: {{asunto.descripcionAsunto}}</p>
-    </div>
-        
+<app-toolbar></app-toolbar>
+<mat-card class="card-principal">
+    <mat-card-content class="card-menu-lateral">
+        <app-menu-lateral></app-menu-lateral>
+    </mat-card-content>    
+    <mat-card-content class="card-area-trabajo">
+        <div style="height: 100%">
+            <h2>Asuntos</h2>
+            <div *ngFor="let asunto of asuntos">
+              <p>{{asunto.idAsunto}}: {{asunto.descripcionAsunto}}</p>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
 
-</div>

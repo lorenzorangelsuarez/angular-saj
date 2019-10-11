@@ -3,8 +3,8 @@ import { Apollo } from 'apollo-angular';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Asunto }  from '../classes/asunto';
-import { getAsuntos, getAsuntosByIdDestinatario } from '../queries/obtener-asuntos';
+import { Asunto }  from '../core/classes/Asunto';
+import { getAsuntos, getAsuntosByIdDestinatario } from '../core/queries/obtener-asuntos';
 
 @Injectable({
   providedIn: 'root'
