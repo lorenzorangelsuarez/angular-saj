@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NOMBRE_APLICACION } from '../../../core/constantes/id-constantes';
 
 @Component({
   selector: 'app-login-toolbar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginToolbarComponent implements OnInit {
 
-  appTitle = 'Sistema de Asuntos Jurídicos';
+  appTitle = NOMBRE_APLICACION;
   constructor() { }
 
   ngOnInit() {

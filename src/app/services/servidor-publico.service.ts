@@ -3,7 +3,7 @@ import { Apollo } from 'apollo-angular';
 import { Observable, of, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { getServidorPublico, getServidorPublicoByID } from '../core/queries/obtenerServidorPublico';
+import { getServidorPublico, getNombreServidorPublicoByID } from '../core/queries/obtenerServidorPublico';
 import { ServidorPublico } from '../core/classes/ServidorPublico';
 
 @Injectable({
@@ -20,8 +20,8 @@ export class ServidorPublicoService {
       .pipe(map(result => result.data['getServidorPublico'][0]));
   }
 
-  obtenerServidorPublicoByID(idServidorPublico: number): Observable<ServidorPublico> {
-    return this.apolloService.query<ServidorPublico>({ query: getServidorPublicoByID, variables: { idServidorPublico} })
+  obtenerNombreServidorPublicoByID(idServidorPublico: number): Observable<ServidorPublico> {
+    return this.apolloService.query<ServidorPublico>({ query: getNombreServidorPublicoByID, variables: {idServidorPublico: idServidorPublico} })
       .pipe(map(result => result.data['getServidorPublico'][0]));
   }
 

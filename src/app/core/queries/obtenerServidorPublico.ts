@@ -29,8 +29,8 @@ query servidores ($correoElectronico: String){
     }
   }  `;
 
-  export const getServidorPublicoByID = gql `
-  query servidorPublicoByID ($idServidorPublico: number){
+  export const getNombreServidorPublicoByID = gql `
+  query servidorPublicoByID ($idServidorPublico: Int){
     getServidorPublico 
     (filter:{idServidorPublico: $idServidorPublico})
     {

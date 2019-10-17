@@ -36,15 +36,8 @@ export class AsuntosService {
   Obtiene una lista de  los Asuntos en el SCG por Destinatario
  */
   getAsuntosByIdDestinatario(id: number): Observable<Asunto[]>{
-    this.apolloService
-      .watchQuery({
-        query: getAsuntosByIdDestinatario, variables: { idDestinatario: id } 
-      }).valueChanges.subscribe(result =>{
-        for (var i in result.data['getAllAsuntos']){
-          this.asuntos.push(result.data['getAllAsuntos'][i]);
-        }
-      });
-      return of (this.asuntos);
-    }
+    return this.apolloService.query<Asunto>({ query: getAsuntosByIdDestinatario, variables: { idDestinatario: id }  })
+    .pipe(map(result => result.data['getAllAsuntos']));
+  }
     
 }

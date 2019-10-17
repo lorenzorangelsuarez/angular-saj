@@ -10,6 +10,9 @@ import { ServidorPublico } from '../../../core/classes/ServidorPublico';
 import { LoginService } from '../../../services/login.service';
 import { ServidorPublicoService } from '../../../services/servidor-publico.service';
 
+// CONSTANTES
+import { ID_SERVIDOR_PUBLICO } from '../../../core/constantes/id-constantes';
+
 
 @Component({
   selector: 'app-login',
@@ -54,20 +57,19 @@ export class LoginComponent implements OnInit {
       this.servidorPublicoService.obtenerServidorPublicoByEMail(userData).subscribe(response =>{
       // Se asigna la respuesta a la propiedad local (Servidor Público)  
       this.servidorPublico = response;   
-      localStorage.setItem('idServidorPublico', this.servidorPublico.idServidorPublico.toString()); 
-        /*
+        
         if(this.servidorPublico == null){
             this.openSnackBar(`El usuario y/o la contraseña son incorrectos`, 'cerrar');
             this.submitted = false;
             return;
          }
+         /*
          else if (this.servidorPublico.passwordUsuario == ""){
             this.openSnackBar(`El usuario ingresado no se encuentra registrado`, 'cerrar');
             this.submitted = false;
             return;
-         }
-          sessionStorage.setItem('authToken', this.servidorPublico.passwordUsuario);
-          */
+         }*/
+         localStorage.setItem(ID_SERVIDOR_PUBLICO, this.servidorPublico.idServidorPublico.toString()); 
           this.redirect();
         
         }, error => {

@@ -4,4 +4,7 @@
 export class Asunto{
     idAsunto: number;
     descripcionAsunto: String;
+    folioUniversal: String;
+    anio: number;
+    consecutivo: number;
 }

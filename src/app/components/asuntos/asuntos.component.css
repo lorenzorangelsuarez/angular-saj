@@ -15,8 +15,27 @@
 }
 .card-area-trabajo{
     width: 84%;
-    float: right;
+    float: left;
     height: auto;
-    margin-right: -1em;
+    /*margin-right: -1em;*/
+    /*border: 1px solid red;*/
+}
+table {
+    width: 100%;
+}
+  
+th.mat-sort-header-sorted {
+    color: black;
 }
 
+.mat-form-field {
+    font-size: 15px;
+    width: 50%;
+    margin-left: 2em;
+
+}
+
+.example-container {
+    height: auto;
+    overflow: auto;
+  }

@@ -14,12 +14,5 @@ export class MenuBienvenidaComponent implements OnInit {
 
   ngOnInit() {
     
-    //localStorage.setItem('idServidorPublico', this.servidorPublicoService.servidorPublico.idServidorPublico.toString());
-
-    /* Se toman los valores que se encuentran disponibles en la variable Servidor Público del
-     * ServidorPublicoService y se asignan a la variable local del tipo ServidorPublico
-    */
-    //this.servidorPublico = this.servidorPublicoService.servidorPublico;
-    //history.pushState('idServidorPublico', this.servidorPublico.idServidorPublico.toString());
   }
 }

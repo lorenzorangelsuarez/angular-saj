@@ -20,7 +20,9 @@ query asuntos($idDestinatario: Int) {
   {
     idAsunto
     descripcionAsunto
-    
+    folioUniversal
+    anio
+    consecutivo
   }
 }
 `;

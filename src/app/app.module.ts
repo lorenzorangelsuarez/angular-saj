@@ -24,6 +24,9 @@ import { LoginToolbarComponent } from './components/login-components/login-toolb
 
 // CHARTS
 import { PieChartComponent } from './components/charts/pie-chart/pie-chart.component';
+import { TurnosComponent } from './components/turnos/turnos.component';
+import { RespuestaComponent } from './components/respuesta/respuesta.component';
+import { DetalleTurnoComponent } from './components/detalle-turno/detalle-turno.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { PieChartComponent } from './components/charts/pie-chart/pie-chart.compo
     ToolbarComponent, 
     MenuLateralComponent,
     PieChartComponent,
-    MenuBienvenidaComponent
+    MenuBienvenidaComponent,
+    TurnosComponent,
+    RespuestaComponent,
+    DetalleTurnoComponent
   ],
   imports: [
     BrowserModule,

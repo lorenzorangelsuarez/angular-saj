@@ -3,13 +3,46 @@
     <mat-card-content class="card-menu-lateral">
         <app-menu-lateral></app-menu-lateral>
     </mat-card-content>    
-    <mat-card-content class="card-area-trabajo">
-        <div style="height: 100%">
-            <h2>Asuntos</h2>
-            <div *ngFor="let asunto of asuntos">
-              <p>{{asunto.idAsunto}}: {{asunto.descripcionAsunto}}</p>
-            </div>
-        </div>
+    <mat-card-content class="card-area-trabajo example-container">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Escriba para filtrar">
+        </mat-form-field>
+        
+        <table mat-table [dataSource] = "dataSource" matSort>
+            <!--ID ASUNTO -->
+            <ng-container matColumnDef="idAsunto">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>idAsunto </th>
+                <td mat-cell *matCellDef="let asunto"> {{asunto.idAsunto}} </td>
+            </ng-container>
+            
+            <!-- FOLIO UNIVERSAL -->
+            <ng-container matColumnDef="Folio">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>  Folio </th>
+                <td mat-cell *matCellDef="let asunto"> {{asunto.folioUniversal}} </td>
+            </ng-container>
+
+            <!-- AÑO -->
+            <ng-container matColumnDef="anio">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>  Anio </th>
+                <td mat-cell *matCellDef="let asunto"> {{asunto.anio}} </td>
+            </ng-container>
+        
+            <!-- CONSECUTIVO -->
+            <ng-container matColumnDef="Consecutivo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>  Consecutivo </th>
+                <td mat-cell *matCellDef="let asunto"> {{asunto.consecutivo}} </td>
+            </ng-container>
+
+            <!-- DESCRIPCIÓN ASUNTO -->
+            <ng-container matColumnDef="Descripción">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Asunto </th>
+                <td mat-cell *matCellDef="let asunto"> {{asunto.descripcionAsunto}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons ></mat-paginator>
     </mat-card-content>
 </mat-card>
 

@@ -3,12 +3,12 @@ import { Area } from './Area';
 
 export class ServidorPublico{
     idServidorPublico: number;
-    //credencial: number;
     nombreServidorPublico: String;
     apellidoPaterno: String;
     apellidoMaterno: String;
-    /*RFC: String;
     correoElectronico: String;
+    /*RFC: String;
+    //credencial: number;
     fechaIngreso: String;
     fechaBaja: String;
     activo: number;
